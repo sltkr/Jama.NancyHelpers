@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ResponseExtensions.cs" />
     <Compile Include="Models\DomainResponse.cs" />
     <Compile Include="Models\Error.cs" />
     <Compile Include="Builders\ResponseBuilder.cs" />
