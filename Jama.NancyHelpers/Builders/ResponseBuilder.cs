@@ -7,6 +7,10 @@ using Newtonsoft.Json;
 
 namespace Jama.NancyHelpers.Builders
 {
+    using System;
+
+    using Nancy.Responses;
+
     public class ResponseBuilder : IAmendResponses
     {
         private Response _response;
@@ -79,6 +83,16 @@ namespace Jama.NancyHelpers.Builders
             return this;
         }
 
+        public IAmendResponses WithContentAsJson<T>(T model)
+        {
+            var serializer = new DefaultJsonSerializer();
+
+            _response = new JsonResponse<T>(model, serializer);
+
+            return this;
+        }
+
+        [Obsolete("This method is deprecated, please use WithContectAsJson")]
         public IAmendResponses WithContent(object model)
         {
             _response.Contents = stream =>
@@ -107,6 +121,7 @@ namespace Jama.NancyHelpers.Builders
         IAmendResponses WithErrorReason(string reasonPhrase);
         IAmendResponses WithStatusCode(HttpStatusCode statusCode);
         IAmendResponses WithContent(object model);
+        IAmendResponses WithContentAsJson<T>(T model);
         IAmendResponses AddHeader(string key, string value);
         Response Build();
     }
