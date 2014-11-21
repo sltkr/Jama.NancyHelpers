@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jama.NancyHelpers", "Jama.NancyHelpers\Jama.NancyHelpers.csproj", "{5D9A05C4-A88E-446F-A3E7-0DA84A74959C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jama.NancyHelpers.Test", "Jama.NancyHelpers.Test\Jama.NancyHelpers.Test.csproj", "{EEE32654-8A3A-4EDF-BCF1-D0CD31E5C58D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,10 @@ Global
 		{5D9A05C4-A88E-446F-A3E7-0DA84A74959C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D9A05C4-A88E-446F-A3E7-0DA84A74959C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D9A05C4-A88E-446F-A3E7-0DA84A74959C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE32654-8A3A-4EDF-BCF1-D0CD31E5C58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE32654-8A3A-4EDF-BCF1-D0CD31E5C58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE32654-8A3A-4EDF-BCF1-D0CD31E5C58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE32654-8A3A-4EDF-BCF1-D0CD31E5C58D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
