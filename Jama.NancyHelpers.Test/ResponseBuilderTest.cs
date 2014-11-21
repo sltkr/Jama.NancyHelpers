@@ -1,11 +1,12 @@
-﻿namespace Jama.NancyHelpers.Test
+﻿using System;
+using Jama.NancyHelpers.Builders;
+using Nancy;
+using Nancy.Responses;
+using Nancy.Testing;
+using Xunit;
+
+namespace Jama.NancyHelpers.Test
 {
-    using System;
-    using Jama.NancyHelpers.Builders;
-    using Nancy;
-    using Nancy.Responses;
-    using Nancy.Testing;
-    using Xunit;
 
     public class TestModule : NancyModule
     {

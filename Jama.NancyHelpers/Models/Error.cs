@@ -1,5 +1,8 @@
 namespace Jama.NancyHelpers.Models
 {
+    /// <summary>
+    /// Represents an error for use with the response builder
+    /// </summary>
     public class Error
     {
         public Error(string propertyName, string errorMessage)
@@ -7,8 +10,15 @@ namespace Jama.NancyHelpers.Models
             PropertyName = propertyName;
             ErrorMessage = errorMessage;
         }
-
+        
+        /// <summary>
+        /// Property associated with the error
+        /// </summary>
         public string PropertyName { get; private set; }    
+
+        /// <summary>
+        /// Error message
+        /// </summary>
         public string ErrorMessage { get; private set; }
 
         public override string ToString()
