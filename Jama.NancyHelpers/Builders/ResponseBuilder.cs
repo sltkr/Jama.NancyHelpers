@@ -191,6 +191,23 @@ namespace Jama.NancyHelpers.Builders
         }
 
         /// <summary>
+        /// Add response cookie
+        /// </summary>
+        /// <param name="name">name of the cookie</param>
+        /// <param name="value">cookie value</param>
+        /// <returns></returns>
+        public IAmendResponses AddCookie(string name, string value)
+        {
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(value))
+            {
+                return this;
+            }
+
+            _response.WithCookie(name, value);
+            return this;
+        }
+
+        /// <summary>
         /// The build step that returns a Nancy response
         /// </summary>
         /// <returns>Returns a Nancy response</returns>
@@ -208,6 +225,7 @@ namespace Jama.NancyHelpers.Builders
         IAmendResponses WithContent(object model);
         IAmendResponses WithContentAsJson<T>(T model);
         IAmendResponses AddHeader(string key, string value);
+        IAmendResponses AddCookie(string name, string value);
         Response Build();
     }
 }
